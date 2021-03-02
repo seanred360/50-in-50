@@ -1,15 +1,30 @@
+@font-face {
+    font-family: "gameboy";
+    src: url('resources/Gill Sans Bold Italic.otf');
+}
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'gameboy';
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
     overflow: hidden;
+}
+
+.top-bar {
+    position: absolute;
+    top: 0;
+    background-color: #ed1c24;
+    width: 100%;
+}
+
+#nintendo-logo {
+    height: 100px;
 }
 
 .container {
@@ -21,7 +36,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 80vh;
+    height: 50vh;
     border-radius: 50px;
     color: #FFF;
     cursor: pointer;
@@ -49,7 +64,39 @@ body {
     transition: opacity 0.3s ease-in 0.4s;
 }
 
-@media(max-width: 480px) {
+.bottom-bar {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+
+    font-size: 2rem;
+    color: #a2bbc2;
+}
+
+.slogan {
+    margin-bottom: 100px;
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: #293237;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#color-logo {
+    height: 3rem;
+}
+
+.gameboy-logo {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 25px;
+    margin-right: 25px;
+    height: 5%;
+}
+
+@media(max-width: 744px) {
     .container {
         width: 100vw;
     }
@@ -58,5 +105,13 @@ body {
     .panel:nth-of-type(5)
     .panel:nth-of-type(6) {
         display: none;
+    }
+
+    .slogan {
+        font-size: 2rem;
+    }
+    
+    #color-logo {
+        height: 1.5rem;
     }
 }
