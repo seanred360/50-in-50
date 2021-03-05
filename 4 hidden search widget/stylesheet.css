@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: linear-gradient(90deg, #7d5fff, #7158e2);
+    background-image: linear-gradient(90deg, #910000, #ff0000);
     font-family: 'Roboto', sans-serif;
     display: flex;
     align-items: center;
@@ -40,6 +40,13 @@ body {
     height: 50px;
     width: 50px;
     transition: transform 0.3s ease;
+}
+
+i {
+    color:rgb(255, 0, 0);
+    font-size: 30px;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: rgb(165, 165, 165);
 }
 
 .btn:focus,
