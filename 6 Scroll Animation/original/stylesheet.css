@@ -22,7 +22,6 @@ body {
     justify-content: center;
     margin: 0;
     overflow-x: hidden;
-    position: relative;
 }
 
 h1 {
@@ -36,15 +35,6 @@ h1 {
     justify-content: space-around;
     width: 100%;
     color: white;
-    text-align: right;
-}
-
-#coin {
-    width: 1.5rem;
-    /* https://css-tricks.com/keep-pixelated-images-pixelated-as-they-scale/ */
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: crisp-edges;
 }
 
 .box {
@@ -59,11 +49,11 @@ h1 {
     transform: translateX(400%);
     transition: transform 0.4s ease;
 
+    /* https://css-tricks.com/keep-pixelated-images-pixelated-as-they-scale/ */
+    background-image: url('resources/mario-brick.png');
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
-
-    background-image: url('resources/mario-brick.png');
     background-size: contain;
     background-repeat: repeat-x;
 }
@@ -78,20 +68,5 @@ h1 {
 
 .box h2 {
     font-size: 42px;
-}
-
-.mario {
-    position: relative;
-}
-
-#mario {
-    position: absolute;
-}
-
-#mario-img {
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: crisp-edges;
-    transform: scale(400%);
 }
 
