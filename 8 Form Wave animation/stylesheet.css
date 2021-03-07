@@ -74,9 +74,13 @@ text {
     color: #fff;
 }
 
+
+.form-control input:required,
 .form-control input:focus,
-.form-control input:valid {
+.form-control {
     outline: 0;
+    /* firefox needs the required and box shadow */
+    box-shadow: none;
 }
 
 .form-control label {
