@@ -11,6 +11,11 @@ body {
     margin: 0;
 }
 
+h1 {
+    margin: 10px 0 20px;
+    text-align: center;
+}
+
 h3 {
     color: white;
     margin: 10px 0 20px;
@@ -18,23 +23,18 @@ h3 {
 }
 
 .container {
-    display: grid;
-    grid-auto-flow: row;
-    column-gap: 20px;
-    justify-content: center;
-    align-content: center;
-    height: 100vh;
-    position: relative;
+   display: block;
 }
 
 textarea {
+    display: block;
     border: none;
-    width: 100%;
+    width: 500px;
     height: 100px;
     font-family: inherit;
-    padding: 10px;
-    margin: 0 0 20px;
     font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .tag {
@@ -50,6 +50,10 @@ textarea {
 .tag.highlight {
     background-color: #273c75;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    text-align: center;
 }
 
 #hideable {
@@ -57,5 +61,7 @@ textarea {
 }
 
 #ball {
-    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
