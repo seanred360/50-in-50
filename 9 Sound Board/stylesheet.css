@@ -1,23 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: rgb(161, 100, 223);
-    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    font-family: 'lobster', 'cursive';
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    overflow: hidden;
-    margin: 0;
+}
+
+.nav-bar {
+    background-color: inherit;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    height: 60px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+header {
+    display: flex;
+    color: red;
+}
+
+.search {
+    position: relative;
+    height: 50px;
+}
+
+.search input {
+    background-color: rgb(243, 243, 243);
+    border: 0;
+    font-size: 18px;
+    padding: 15px;
+    height: 50px;
+    width: 50px;
+    transition: width 0.3s ease;
+}
+
+.searchBtn {
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    transition: transform 0.3s ease;
+}
+
+.fa-search {
+    color:red;
+    font-size: 30px;
+}
+
+.btn:focus,
+.input:focus {
+    outline: none;
+}
+
+.search.active .input {
+    width: 200px;
+}
+
+.search.active .searchBtn {
+    transform: translateX(198px);
+}
+
+#buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 125px;
 }
 
 .btn {
-    background-color: rebeccapurple;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    
     border-radius: 5px;
     border: none;
     color: #fff;
@@ -25,12 +100,51 @@ body {
     padding: 1.5rem 3rem;
     font-size: 1.2rem;
     font-family: inherit;
+    height: 400px;
+    width: 200px;
+    overflow: hidden;
 }
 
-.btn:hover {
-    opacity: 0.9;
+.btn span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.322);
+}
+
+.btn i {
+    font-size: 6rem;
+    transition: all 0.2s ease-in;
+}
+
+.btn i:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
 }
 
 .btn:focus {
     outline: none;
+}
+
+.load-button {
+    border-radius: 40px;
+    background-color: red;
+    outline: none;
+    border: 0;
+    padding: 10px 50px;
+    color: white;
+    text-align: center;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.load-button:hover {
+    opacity: 0.8;
+}
+
+.load-button:active {
+    outline: none;
+    transform: scale(0.99);
 }
